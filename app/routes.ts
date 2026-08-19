@@ -12,15 +12,17 @@ export default [
     index ("routes/home.tsx"),
 
     route(
-        "products",
-        "routes/products.tsx"
-    ),
+    "products",
+    "routes/products.tsx",
+    [
+        index("routes/products-list.tsx"),
 
-    route(
-
-        "products/:productId",
-        "routes/product-details.tsx"
-    ),
+        route(
+            ":productId",
+            "routes/product-details.tsx"
+        )
+    ]
+),
 
     route(
         "categories",
